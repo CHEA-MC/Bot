@@ -71,13 +71,14 @@ def format_size(bytes):
 
 def progress_bar(current, total):
     """បង្កើតរូបរាង Progress Bar"""
+    if total <= 0: return "▓▓▓▓▓▓▓▓▓▓ 100%"
     percentage = current * 100 / total
     filled_length = int(percentage // 10)
     bar = '▓' * filled_length + '░' * (10 - filled_length)
     return f"{bar} {percentage:.1f}%"
 
 def download_with_progress(url, message, chat_id, filename):
-    """ដោនឡូតដោយមានបង្ហាញភាគរយ និងទំហំ"""
+    """ដោនឡូតដោយមានបង្ហាញភាគរយ និងទំហំ (សម្រាប់ Direct Link ដូចជា FB, TikTok)"""
     try:
         response = requests.get(url, stream=True, timeout=60)
         total_size = int(response.headers.get('content-length', 0))
@@ -111,13 +112,38 @@ def download_with_progress(url, message, chat_id, filename):
         print(e)
         return None
 
+# Class សម្រាប់ចាប់យកភាគរយពី yt-dlp ពេលដោនឡូត YouTube
+class YtDlpProgress:
+    def __init__(self, bot, chat_id, message_id):
+        self.bot = bot
+        self.chat_id = chat_id
+        self.message_id = message_id
+        self.last_update_time = time.time()
+
+    def hook(self, d):
+        if d['status'] == 'downloading':
+            now = time.time()
+            if now - self.last_update_time > 3: # អាប់ដេតរៀងរាល់ ៣ វិនាទី
+                try:
+                    downloaded = d.get('downloaded_bytes', 0)
+                    total = d.get('total_bytes') or d.get('total_bytes_estimate', 0)
+                    size_str = f"{format_size(downloaded)} / {format_size(total)}" if total else f"{format_size(downloaded)}"
+                    prog_str = progress_bar(downloaded, total)
+                    speed = d.get('_speed_str', 'N/A').strip()
+                    
+                    text = f"📥 **កំពុងដោនឡូតពី YouTube...**\n\n{prog_str}\n📦 ទំហំ: `{size_str}`\n⚡ ល្បឿន: `{speed}`"
+                    self.bot.edit_message_text(text, self.chat_id, self.message_id, parse_mode="Markdown")
+                    self.last_update_time = now
+                except:
+                    pass
+
 def get_video_info(url, is_audio=False):
     """ទាញយកទាំង Link និង ចំណងជើង"""
     ydl_opts = {
         'format': 'bestaudio/best' if is_audio else 'best',
         'quiet': True,
         'no_warnings': True,
-        'extractor_args': {'youtube': {'player_client': ['android']}}
+        'extractor_args': {'youtube': {'player_client': ['android', 'web']}} # បន្លំខ្លួនកុំឲ្យជាប់ 403
     }
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -161,7 +187,7 @@ def broadcast_message(message):
             try:
                 bot.send_message(user_id, f"📢 **សេចក្តីប្រកាស**\n\n{msg}", parse_mode="Markdown")
                 sent += 1
-                time.sleep(0.05) # Prevent FloodWait
+                time.sleep(0.05)
             except:
                 failed += 1
         
@@ -171,10 +197,8 @@ def broadcast_message(message):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    # Save User & Notify Admin
     save_user(message.chat.id)
     notify_admin(message, "START BOT")
-    
     bot.send_video(message.chat.id, TUTORIAL_VIDEO, caption=f"👋 សួស្តី! ផ្ញើ Link មកដើម្បីដោនឡូត។\n\n✅ Facebook, YouTube, TikTok, Pinterest{CREDIT}")
 
 @bot.message_handler(func=lambda m: m.text and m.text.startswith("http"))
@@ -182,21 +206,27 @@ def handle_links(message):
     url = message.text
     chat_id = message.chat.id
     
-    # Save User & Notify Admin (In case they never pressed start)
     save_user(chat_id)
     notify_admin(message, "SEND LINK", url)
 
     msg_status = bot.reply_to(message, "🔎 **កំពុងស្វែងរកទិន្នន័យ...**", parse_mode="Markdown")
 
     # YouTube Logic
-    if "youtube" in url or "youtu.be" in url:
+    if "youtube.com" in url or "youtu.be" in url:
         cache_id = str(message.message_id)
         LINK_CACHE[cache_id] = url
         
-        markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("🎬 Video", callback_data=f"yt|vid|{cache_id}"),
-                   types.InlineKeyboardButton("🎧 MP3", callback_data=f"yt|aud|{cache_id}"))
-        bot.edit_message_text("🎬 **YouTube Download**\nជ្រើសរើសប្រភេទខាងក្រោម៖", chat_id, msg_status.message_id, reply_markup=markup)
+        markup = types.InlineKeyboardMarkup(row_width=2)
+        btn_1080 = types.InlineKeyboardButton("🎬 1080p", callback_data=f"yt|1080|{cache_id}")
+        btn_720 = types.InlineKeyboardButton("🎬 720p", callback_data=f"yt|720|{cache_id}")
+        btn_480 = types.InlineKeyboardButton("🎬 480p", callback_data=f"yt|480|{cache_id}")
+        btn_360 = types.InlineKeyboardButton("🎬 360p", callback_data=f"yt|360|{cache_id}")
+        btn_mp3 = types.InlineKeyboardButton("🎧 MP3 Audio", callback_data=f"yt|mp3|{cache_id}")
+        
+        markup.add(btn_1080, btn_720, btn_480, btn_360)
+        markup.add(btn_mp3)
+        
+        bot.edit_message_text("🎬 **YouTube Download**\nសូមជ្រើសរើសកម្រិតវីដេអូ ឬសម្លេងខាងក្រោម៖", chat_id, msg_status.message_id, reply_markup=markup, parse_mode="Markdown")
         return
 
     # TikTok Logic
@@ -302,31 +332,82 @@ def callback_handler(call):
         else:
             bot.edit_message_text("❌ បរាជ័យក្នុងការដោនឡូត។", chat_id, msg_id)
 
-    # YOUTUBE HANDLER
+    # YOUTUBE HANDLER 
     elif service == "yt":
         url = LINK_CACHE.get(cache_id)
         if not url:
             bot.answer_callback_query(call.id, "❌ ទិន្នន័យចាស់ពេក សូមផ្ញើ Link ម្តងទៀត")
             return
 
-        is_audio = (type_ == "aud")
-        bot.edit_message_text("⏳ **កំពុងស្វែងរក File...**", chat_id, msg_id, parse_mode="Markdown")
-        link, title = get_video_info(url, is_audio)
+        bot.edit_message_text("⏳ **កំពុងចាប់ផ្តើមដោនឡូត...**", chat_id, msg_id, parse_mode="Markdown")
         
-        if link:
-            ext = 'mp3' if is_audio else 'mp4'
-            filename = f"yt_{os.urandom(3).hex()}.{ext}"
-            path = download_with_progress(link, call.message, chat_id, filename)
-            
-            if path:
-                bot.edit_message_text("⬆️ **កំពុងផ្ញើ...**", chat_id, msg_id, parse_mode="Markdown")
-                with open(path, 'rb') as f:
-                    if is_audio: bot.send_audio(chat_id, f, caption=f"✅ **{title}**{CREDIT}", parse_mode="Markdown")
-                    else: bot.send_video(chat_id, f, caption=f"✅ **{title}**{CREDIT}", parse_mode="Markdown")
-                os.remove(path)
-                bot.delete_message(chat_id, msg_id)
+        if not os.path.exists('downloads'): os.makedirs('downloads')
+        
+        is_audio = (type_ == "mp3")
+        base_name = f"downloads/yt_{os.urandom(3).hex()}"
+        
+        if is_audio:
+            ydl_format = 'bestaudio/best'
+            postprocessors = [{
+                'key': 'FFmpegExtractAudio',
+                'preferredcodec': 'mp3',
+                'preferredquality': '192',
+            }]
         else:
-            bot.edit_message_text("❌ បរាជ័យក្នុងការទាញយក។", chat_id, msg_id)
+            ydl_format = f'bestvideo[height<={type_}][ext=mp4]+bestaudio[ext=m4a]/best[height<={type_}]/best'
+            postprocessors = []
+
+        progress_tracker = YtDlpProgress(bot, chat_id, msg_id)
+        
+        ydl_opts = {
+            'format': ydl_format,
+            'outtmpl': f"{base_name}.%(ext)s",
+            'quiet': True,
+            'no_warnings': True,
+            'progress_hooks': [progress_tracker.hook],
+            'postprocessors': postprocessors,
+            # បន្ថែមការបន្លំខ្លួនកុំឲ្យជាប់ Error 403 ពេលកំពុង Download ពិតប្រាកដ
+            'extractor_args': {'youtube': {'player_client': ['android', 'web']}},
+            'http_headers': {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            }
+        }
+
+        try:
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                info = ydl.extract_info(url, download=True)
+                title = info.get('title', 'YouTube Video')
+                
+                final_filename = ydl.prepare_filename(info)
+                if is_audio:
+                    final_filename = final_filename.rsplit('.', 1)[0] + '.mp3'
+
+                bot.edit_message_text("⬆️ **កំពុងផ្ញើទៅកាន់អ្នក... អាចចំណាយពេលបន្តិចអាស្រ័យលើទំហំ**", chat_id, msg_id, parse_mode="Markdown")
+                
+                file_size = os.path.getsize(final_filename)
+                if file_size > 50 * 1024 * 1024: 
+                    bot.edit_message_text(f"❌ **បរាជ័យ:** ឯកសារមានទំហំធំពេក (`{format_size(file_size)}`) Telegram អនុញ្ញាតត្រឹម 50MB តែប៉ុណ្ណោះ។", chat_id, msg_id, parse_mode="Markdown")
+                else:
+                    with open(final_filename, 'rb') as f:
+                        if is_audio: 
+                            bot.send_audio(chat_id, f, caption=f"✅ **{title}**{CREDIT}", parse_mode="Markdown", title=title)
+                        else: 
+                            bot.send_video(chat_id, f, caption=f"✅ **{title}**\n🎬 Quality: {type_}p{CREDIT}", parse_mode="Markdown")
+                    bot.delete_message(chat_id, msg_id)
+                
+                if os.path.exists(final_filename):
+                    os.remove(final_filename)
+                    
+        except yt_dlp.utils.DownloadError as e:
+            error_msg = str(e)
+            if "403" in error_msg:
+                 bot.edit_message_text(f"❌ **Error 403 Forbidden:** YouTube កំពុងប្លុកប្រព័ន្ធ។\n\nអ្នកគ្រប់គ្រង (Admin) សូមបើក Terminal រួចវាយបញ្ជា៖\n`pip install -U yt-dlp`", chat_id, msg_id, parse_mode="Markdown")
+            else:
+                 bot.edit_message_text(f"❌ **បរាជ័យ:** {error_msg}", chat_id, msg_id, parse_mode="Markdown")
+            print(f"YouTube Download Error: {e}")
+        except Exception as e:
+            bot.edit_message_text(f"❌ **មានបញ្ហាអ្វីមួយកើតឡើង:** អាចមកពីវីដេអូអត់មានទម្រង់នេះ។", chat_id, msg_id, parse_mode="Markdown")
+            print(f"General Error: {e}")
 
 if __name__ == "__main__":
     print("Bot is running...")

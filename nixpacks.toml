@@ -1,3 +1,14 @@
 [phases.setup]
-nixPkgs = ["python310", "ffmpeg"]
+nixPkgs = ["python311", "ffmpeg"]
 
+[phases.install]
+cmds = [
+  "pip install --upgrade pip",
+  "pip install -r requirements.txt"
+]
+
+[phases.build]
+cmds = []
+
+[start]
+cmd = "python bot.py"

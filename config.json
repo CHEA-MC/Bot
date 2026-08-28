@@ -1,16 +1,48 @@
 {
-  "version": 5.5,
+  "version": 2,
   "app_version": "1.0.0",
   "maintenance": false,
-  "message": "Thank you for supporting Madam VPN",
-  "data": [
+  "message": "Welcome to Mekong Tunnel",
+  "servers": [
     {
-      "id": "th-01",
-      "name": "Thailand VPS 01",
-      "country": "TH",
-      "flag": "🇹🇭",
-      "enabled": true,
-      "content": "vless://69db9ce7-ba3a-41ab-b5d3-67e39148d27b@104.18.36.89:80?path=%2F&security=none&encryption=none&host=th.ezecom.ggff.net&type=ws#%F0%9F%AB%B0%F0%9F%8F%BB_%E1%9E%98%E1%9E%B7%E1%9E%8F%E1%9F%92%E1%9E%8F%E1%9E%A0%E1%9F%92%E1%9E%9C%E1%9E%BC%E1%9E%93%20-%20%E1%9E%94%E1%9F%92%E1%9E%9A%E1%9E%91%E1%9F%81%E1%9E%9F%E1%9E%90%E1%9F%83%20VPS%20%F0%9F%87%B9%F0%9F%87%AD"
+      "id": "server-1787951785823",
+      "name": "Cambodia Phnom Penh",
+      "country": "KH",
+      "flag": "🇰🇭",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ89uLcb7MSfpumx-gepCf8maDenusUJNwCHPxNNKMczQ&s=10",
+      "protocol": "vless",
+      "content": "vless://69db9ce7-ba3a-41ab-b5d3-67e39148d27b@kh.ezecom.ggff.net:80?path=%2F&security=&encryption=none&host=kh.ezecom.ggff.net&type=ws#%F0%9F%AB%B0%F0%9F%8F%BB_%E1%9E%A0%E1%9F%92%E1%9E%82%E1%9F%81%E1%9E%98%20%E1%9E%9F%E1%9F%81%E1%9E%80%E1%9E%B6%E1%9E%8F%20-%20%E1%9E%94%E1%9F%92%E1%9E%9A%E1%9E%91%E1%9F%81%E1%9E%9F%E1%9E%80%E1%9E%98%E1%9F%92%E1%9E%96%E1%9E%BB%E1%9E%87%E1%9E%B6%20VPS%20%F0%9F%87%B0%F0%9F%87%AD",
+      "enabled": true
+    },
+    {
+      "id": "server-1787951901764",
+      "name": "Hong Kong",
+      "country": "HK",
+      "flag": "🇭🇰",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrZKO7mh0xcUjVDuuq4Jn_Pnhp6_4_PROiMzTkeEVYag&s=10",
+      "protocol": "vless",
+      "content": "vless://69db9ce7-ba3a-41ab-b5d3-67e39148d27b@sg.ezecom.ggff.net:80?path=%2F&security=&encryption=none&host=sg.ezecom.ggff.net&type=ws#%F0%9F%AB%B0%F0%9F%8F%BB_%E1%9E%A0%E1%9F%92%E1%9E%82%E1%9F%81%E1%9E%98%20%E1%9E%9F%E1%9F%81%E1%9E%80%E1%9E%B6%E1%9E%8F%20-%20%E1%9E%94%E1%9F%92%E1%9E%9A%E1%9E%91%E1%9F%81%E1%9E%9F%E1%9E%80%E1%9E%98%E1%9F%92%E1%9E%96%E1%9E%BB%E1%9E%87%E1%9E%B6%20VPS%20%F0%9F%87%B0%F0%9F%87%AD",
+      "enabled": true
+    }
+  ],
+  "networks": [
+    {
+      "id": "network-1787952013773",
+      "name": "Cambodia Metfone Unlimited",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCHg8DR-Z1g9oC8EGfTwPPGg6Q3nV4iZdJNX_CZ6oS3_Pwd5NYk9BGzXH&s=10",
+      "type": "point",
+      "address": "104.18.36.89",
+      "host": "",
+      "enabled": true
+    },
+    {
+      "id": "network-1787952120282",
+      "name": "Cambodia Metfone Free internet",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCHg8DR-Z1g9oC8EGfTwPPGg6Q3nV4iZdJNX_CZ6oS3_Pwd5NYk9BGzXH&s=10",
+      "type": "point",
+      "address": "172.64.151.167",
+      "host": "",
+      "enabled": true
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "version": 5.5,
+  "version": 5.4,
   "app_version": "1.0.0",
   "maintenance": false,
   "message": "Thank you for supporting Madam VPN",
@@ -11,25 +11,6 @@
       "flag": "🇹🇭",
       "enabled": true,
       "content": "vless://69db9ce7-ba3a-41ab-b5d3-67e39148d27b@104.18.36.89:80?path=%2F&security=none&encryption=none&host=th.ezecom.ggff.net&type=ws#%F0%9F%AB%B0%F0%9F%8F%BB_%E1%9E%98%E1%9E%B7%E1%9E%8F%E1%9F%92%E1%9E%8F%E1%9E%A0%E1%9F%92%E1%9E%9C%E1%9E%BC%E1%9E%93%20-%20%E1%9E%94%E1%9F%92%E1%9E%9A%E1%9E%91%E1%9F%81%E1%9E%9F%E1%9E%90%E1%9F%83%20VPS%20%F0%9F%87%B9%F0%9F%87%AD"
-    }
-  ]
-}      "enabled": true
-    },
-    {
-      "id": "sg-01",
-      "name": "Singapore 01",
-      "country": "SG",
-      "flag": "🇸🇬",
-      "content": "vless://YOUR-UUID@sg.example.com:443?security=tls&encryption=none&type=tcp&sni=sg.example.com#Singapore%2001",
-      "enabled": true
-    },
-    {
-      "id": "jp-01",
-      "name": "Japan 01",
-      "country": "JP",
-      "flag": "🇯🇵",
-      "content": "vless://YOUR-UUID@jp.example.com:443?security=tls&encryption=none&type=tcp&sni=jp.example.com#Japan%2001",
-      "enabled": true
     }
   ]
 }

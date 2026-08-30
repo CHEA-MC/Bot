@@ -1,9 +1,11 @@
 {
-  "version": 10,
-  "app_version": "1.0.0",
+  "version": 11,
+  "app_version": "1.0.1",
   "maintenance": false,
   "message": "Mekong to Mekong Tunnel",
-  "update_url": "",
+  "messageapp": "• បន្ថែមមុខងារ Dark/Light Theme Switcher\n• បន្ថែមមុខងារ Per-App VPN (ជ្រើសរើស App ដើរអ៉ីនធឺណិតធម្មតា)\n• កែសម្រួល Setting DNS និង Router\n• ដោះស្រាយបញ្ហាចុច Stop គាំង Disconnected\n• បង្កើនល្បឿន និងស្ថិរភាពការតភ្ជាប់",
+  "update_url": "https://raw.githubusercontent.com/CHEA-MC/Bot/refs/heads/main/config.json",
+  "update_appurl": "https://api.betadrop.app/api/guest/download/hUJzbd",
   "servers": [
     {
       "id": "KH1",

@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 12,
   "app_version": "1.0.0",
   "maintenance": false,
   "message": "Mekong to Mekong Tunnel",
@@ -281,7 +281,7 @@
     },
     {
       "id": "SG-UDP-01",
-      "name": "SG - METFONE - UDP CUSTOM",
+      "name": "SG - តេស្ត - UDP CUSTOM",
       "short_name": "SG UDP 1",
       "country": "Singapore",
       "location": "LATITUDE",
@@ -289,9 +289,9 @@
       "type": "SERVER FREE",
       "server_type": "UDP_CUSTOM",
       "icon": "https://flagcdn.com/w80/sg.png",
-      "UDPIP": "",
-      "UDPUsername": "",
-      "UDPPassword": "",
+      "UDPIP": "th.ezecom.ggff.net",
+      "UDPUsername": "royal",
+      "UDPPassword": "idc",
       "TCPPort": "",
       "SSHPort": "",
       "SSLPort": "",

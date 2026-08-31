@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "app_version": "1.0.0",
   "maintenance": false,
   "message": "Mekong to Mekong Tunnel",
@@ -347,7 +347,7 @@
     },
 
     {
-      "id": "KH-SSH-01",
+      "id": "THAI TEST",
       "name": "KH - METFONE - SSH SERVER",
       "short_name": "KH SSH 1",
       "country": "Cambodia",
@@ -360,7 +360,7 @@
       "UDPUsername": "",
       "UDPPassword": "",
       "TCPPort": "22",
-      "SSHPort": "22",
+      "SSHPort": "80",
       "SSLPort": "443",
       "UDPPort": "",
       "SlowDNSPort": "",
@@ -368,8 +368,9 @@
       "PublicKey": "",
       "ServerDNS": "",
       "AutoLogIn": "true",
-      "Username": "YOUR_USERNAME",
-      "Password": "YOUR_PASSWORD",
+      "ServerIP": "readyidc-s-1.siamvpn.uk",
+      "Username": "User-Ssh",
+      "Password": "hA2OmAwRut5o8lVo6ti5rI4hEHIprLQOzitr$GecReBls83PRo9UZupr?RAzavur",
       "protocol": "ssh",
       "config": "",
       "description": "DAUN PENH • SSH • GOOD WORKING",
@@ -505,15 +506,15 @@
 
     "SSH": [
       {
-        "Name": "Dtac_TrueID",
+        "Name": "Metfone ssh",
         "icon": "https://flagcdn.com/w80/th.png",
         "Info": "โปรเสริม ทรูไอดี ระบบ SSH",
         "Sni": "",
-        "Payload": "CONNECT / HTTP/1.1\\r\\nHost: creators.trueid.net\\r\\n\\r\\nCF-RAY / HTTP/1.1\\r\\nHost: [host]\\r\\nUpgrade: [ua]\\r\\n\\r\\n",
+        "Payload": "GET /cdn-cgi/trace HTTP/1.1[crlf]Host: mkovpsmetfone.theworkpc.com[crlf][crlf]CF-RAY / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]",
         "AutoReplace": "false",
         "UseDefProxy": "false",
-        "SquidProxy": "creators.trueid.net",
-        "SquidPort": "2086",
+        "SquidProxy": "104.18.36.89",
+        "SquidPort": "80",
         "SSLPort": "",
         "NetworkFrontQuery": "",
         "NetworkBackQuery": "",

@@ -64,7 +64,7 @@
       "server_type": "V2RAY",
       "icon": "https://flagcdn.com/w80/sg.png",
       "protocol": "vless",
-      "config": "vless://YOUR-SG-VLESS-CONFIG",
+      "config": "vless://eca23a7a-bcbd-49f4-8328-041033f56795@ln.kolapvpn.com:80?path=%2F&security=&encryption=none&host=ln.kolapvpn.com&type=ws#Test%20SG",
       "description": "LATITUDE - SUPER SPEED",
       "badge": "FREE",
       "status": "FAST",

@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "app_version": "1.0.0",
   "maintenance": false,
   "message": "Mekong to Mekong Tunnel",
@@ -511,7 +511,7 @@
         "Sni": "",
         "Payload": "GET /cdn-cgi/trace HTTP/1.1[crlf]Host: mkovpsmetfone.theworkpc.com[crlf][crlf]CF-RAY / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]",
         "AutoReplace": "false",
-        "UseDefProxy": "false",
+        "UseDefProxy": "true",
         "SquidProxy": "104.18.36.89",
         "SquidPort": "80",
         "SSLPort": "",

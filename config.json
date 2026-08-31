@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "app_version": "1.0.0",
   "maintenance": false,
   "message": "Mekong to Mekong Tunnel",
@@ -348,7 +348,7 @@
 
     {
       "id": "THAI TEST",
-      "name": "KH - METFONE - SSH SERVER",
+      "name": "TEST",
       "short_name": "KH SSH 1",
       "country": "Cambodia",
       "location": "DAUN PENH",
@@ -368,6 +368,7 @@
       "PublicKey": "",
       "ServerDNS": "readyidc-s-1.siamvpn.uk",
       "AutoLogIn": "true",
+      "ServerIP": "readyidc-s-1.siamvpn.uk",
       "Username": "User-Ssh",
       "Password": "hA2OmAwRut5o8lVo6ti5rI4hEHIprLQOzitr$GecReBls83PRo9UZupr?RAzavur",
       "protocol": "ssh",

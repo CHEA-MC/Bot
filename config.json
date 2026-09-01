@@ -1,5 +1,5 @@
 {
-  "version": 26,
+  "version": 27,
   "app_version": "1.0.0",
   "maintenance": false,
   "message": "Mekong to Mekong Tunnel",
@@ -551,7 +551,7 @@
         "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png",
         "type": "point",
         "mode": "address",
-        "address": "104.18.36.89",
+        "address": "104.18.6.105",
         "host": "",
         "description": "ប្រើប្រាស់ដោយមិនមានសេវាកម្មល្បឿនលឿន 🔥🎉 ",
         "status": "GOOD",

@@ -6,22 +6,150 @@
     {
       "id": "V1",
       "name": "SMART FREE - SUPER FAST 🔥",
-      "country": "Unknown",
-      "country_code": "",
+      "country": "Thailand 🇹🇭",
+      "country_code": "TH",
       "protocol": "fastdns",
       "address": "43.249.32.4",
       "port": 53,
-      "tier": "free",
+      "tier": "premium",
       "config": {
         "local_port": 8080,
         "dns_resolver": "43.249.32.4:53",
         "ovpn": "client\ndev tun\nproto udp\nremote 127.0.0.1 8080\nnobind\npersist-key\npersist-tun\nremote-cert-tls server\ntun-mtu 1300\nmssfix 1000\ndata-ciphers AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305\nauth SHA512\ncompress lz4-v2\nroute 43.249.32.4 255.255.255.255 net_gateway\nverb 3\n\n<ca>\n-----BEGIN CERTIFICATE-----\nMIIDSDCCAjCgAwIBAgIUBFFx/dQ5cN/n68WrAY1J7okmzmAwDQYJKoZIhvcNAQEL\nBQAwFTETMBEGA1UEAwwKRmFzdEROUy1DQTAeFw0yNjExMTYwNDQ1NTJaFw0zNjEx\nMTMwNDQ1NTJaMBUxEzARBgNVBAMMCkZhc3RETlMtQ0EwggEiMA0GCSqGSIb3DQEB\nAQUAA4IBDwAwggEKAoIBAQDToEkmxURVQJVHlKsmAneC3JmYN6DKn5sOKyV0QtXa\nIh5jGMdMZ5kdFg4YO3gGRlPmlH+jtjRTbzIF15wYhwVDIR5MBtJkZffDkfAwcpPt\nburn2PGMHVHbJxpB8V95uGqsKe+zu6s6etAA6FvUru6/yEF/51k75hjrMJ2e54Sn\nJh8avO0nlCGuYRA2lkWH3FAeWLbsrHCKdLP0AFVXRR758AnkNfwLtrolHAijRDaI\nIWT3vtwcSY3dopLmf/8v5NHE2fOzUGqYKgTcQZ+wrNJBR0tZtNZR6vtUVFhZGPJ4\nQXaUSu7dWX+tcQWx8PsmNrptAsFJ6P7hS5jNlYDzeVejAgMBAAGjgY8wgYwwHQYD\nVR0OBBYEFPd5eTSW3fgejYFHwjh81GVoDo43MFAGA1UdIwRJMEeAFPd5eTSW3fge\njYFHwjh81GVoDo43oRmkFzAVMRMwEQYDVQQDDApGYXN0RE5TLUNBghQEUXH91Dlw\n3+frxasBjUnuiSbOYDAMBgNVHRMEBTADAQH/MAsGA1UdDwQEAwIBBjANBgkqhkiG\n9w0BAQsFAAOCAQEAfxh8T/xFeqPgu7Ux5sbbHwoqrYTqCUlso94e2mXuESa4wckt\nZ20mpV56K+KBQeIn1rj/qa7FZayiGCnqoW5d3JG8Ui+pdh/qB4Pep4p0YhNvaiHw\nG8WB7ZPIs5NAOShhPsQxyD/HBBDntrYKA9YRqgmui0RqUAstfgO9uIZTsn9VpWAf\nbFKbHiPCFMZO9qMQyg2zbBX2P6knPbWsvXWQRETn1CJXHXQdPIrMUSMGfTb1apg5\nliFo7QWoolb1CqLLYTtYw0QY9ZjppmWRYNnk1OA3NnouaLqVkPyp5Ku5lUDQSmsq\nB0qJNBhWIkMy94cvufOgcP+I/Hyddfq/b/TjDw==\n-----END CERTIFICATE-----\n</ca>\n\n<cert>\n-----BEGIN CERTIFICATE-----\nMIIDUzCCAjugAwIBAgIRAPsvNHth/kfcRsabgx4y9G8wDQYJKoZIhvcNAQELBQAw\nFTETMBEGA1UEAwwKRmFzdEROUy1DQTAeFw0yNjExMTYwNDQ1NTNaFw0yOTAyMTgw\nNDQ1NTNaMBExDzANBgNVBAMMBmNsaWVudDCCASIwDQYJKoZIhvcNAQEBBQADggEP\nADCCAQoCggEBALfcKsE3oQsyucvAU+BNIrBtAjKxv939M4NntxXTKnYQTVVFpF6y\nBO2BYpG1F1pTmmzfvmNiCUjTFOT35VQGjMh5tMI95IoZDkyFgKpErK+Vz0gdoxt0\nUiPkWuxi4xGsP6beaPhSiwpGLXtxeGnF9vkCG4HLbyJCJ4ffRcah3EbjxK7hEKgR\nihh3l6UIzzRPG6fV21SE4ZuUwMDJc4RzvEWRJmwV+DshSogkpxuq9o24Ni5OpCG5\nx0FoRF6731C7qYlfZqJxqn2Ebf0Z0/v7jFRd8zrMONfFIspIFUjbCrUPvi2B3Xny\n46dGeX/bm6OrOcRFVKdoiQzDu9X/L0tfCuMCAwEAAaOBoTCBnjAJBgNVHRMEAjAA\nMB0GA1UdDgQWBBQmye83u+l/nNJl+TrwMe9mTTzAqzBQBgNVHSMESTBHgBT3eXk0\nlt34Ho2BR8I4fNRlaA6ON6EZpBcwFTETMBEGA1UEAwwKRmFzdEROUy1DQYIUBFFx\n/dQ5cN/n68WrAY1J7okmzmAwEwYDVR0lBAwwCgYIKwYBBQUHAwIwCwYDVR0PBAQD\nAgeAMA0GCSqGSIb3DQEBCwUAA4IBAQA9pKBy1Kjrq2uhE7Wxn0XCOC+q0GqTuSZf\nxbH6lv5lt9XRw0pEUMOv9pkBJCh+B7RwUEa3nnpfx6BHFtySaskt+MpzgnMl/2Xh\nRAYDjjtMxNmfm98r4t6EaMv93D98rIL/9Nxi0QL7rGCkX4E/qOma7LwoH+TGeWyA\nqeSxqtU3eG32THDZyR0ygMHh56LM4fCnq7jLoWtk7H0CM1rOtxdVZuoMeoLS84hE\nL9SNRrYZOKXbOjtnWlxtchIz6Y9KXnZGtEYEAzpagIIfvGebYUlers4avCiIo+hg\nDHUnjhtuN3SLsP1l30bJ8RDDo8FKngqAJNF45DmjLbHba/lNRzMm\n-----END CERTIFICATE-----\n</cert>\n\n<key>\n-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC33CrBN6ELMrnL\nwFPgTSKwbQIysb/d/TODZ7cV0yp2EE1VRaResgTtgWKRtRdaU5ps375jYglI0xTk\n9+VUBozIebTCPeSKGQ5MhYCqRKyvlc9IHaMbdFIj5FrsYuMRrD+m3mj4UosKRi17\ncXhpxfb5AhuBy28iQieH30XGodxG48Su4RCoEYoYd5elCM80Txun1dtUhOGblMDA\nyXOEc7xFkSZsFfg7IUqIJKcbqvaNuDYuTqQhucdBaEReu99Qu6mJX2aicap9hG39\nGdP7+4xUXfM6zDjXxSLKSBVI2wq1D74tgd158uOnRnl/25ujqznERVSnaIkMw7vV\n/y9LXwrjAgMBAAECggEAGKgxH6prMYpC+n03gmw1y71CvzOxTH8JaoT9O7MPDbhP\n9rCZQ43SNVvVsT68/AMcQZ+b884Q+rA8LBzGp4cdWEFiKW6NeKu1jDOXNr5w/jc0\nDjLTTfpCjcexHeSBGTylaKaJI0xGk0EoFlb4VA8VeP18XOLAa7K9hG4/+Ex6sxLc\nPfArvbUl8nfqi4pPBqcEHJev64NZfCr30gdnaPvGCMAAcE4mt2W8GNy4DZNe0qw5\nA8XZ/NFTCcBa9Kf7r64K+eg4kGyR26c08Zxd1Y6fTVHsY4IAukYmymH4e5+RBxeI\nsZF4KRIgLeAz2sZo6cv3Sh7WyR8TP2zTsOkDBkW8iQKBgQDtqBX563biCjfuIp99\nvnRFBkt6vgZN7gNTBxg9IvDPJkBs1pof24zlTOYub9iPpIT75u4EA/FEaiON+huh\n3hDMyq2oizUNyalWG40mbcrtwEIFnf5ZnMBuu1CZroIqK6FD6+jLkYfowNbbSE4s\n+/+tl3q3mjty6QGqY9HS+6bSrQKBgQDGDRoXaQMPD58kH0QqFNScrdaPNwHajw7/\nL/FPEdBRKM9OiDayQkOyx7OJWkDIbY2l4BEV8iuqKRrOig5rMAgyPCtG8PWmVlN8\n/L7Sfbg9hyuFD9/0BPYqvJoEZYm0Y8he5xg39ihbzoLofghqt31g1LxfejucOi8W\nm/RUycyVzwKBgGuf9ivS7WiaNg/6z/2S9XaYzi/MxHAgPJMqIFj3bNRyvzRKz0tk\nEt94vrkC37DVUX/+aYWZ/3X7FxTh0gew2CzWEGTGfgU7cRtUqMxhZkfbDEsc7KXK\nbf73hx3BwKK2VXa77BXcVw8Z3XM6wGRwzq3fbqydBRUZ3i46vDfuzPKVAoGBAIvS\nHCWC4cH0SWn7GOiMpD2pDN02/HwMm43Vjws/jE5//Tt4NwVKevjwu/OwYCQgE+yT\nb/yKaAFN27sNBHjwBBlTGUqQOx0fvPl0hlOcpkHp9/OM7ZMdHZ22YRXRiZJtD7zQ\nceywQHXwKcNxlwegW0fNaOAPL55wBWZ0294wSdtJAoGBALnutYx9542p0cVpGXlz\n7MwVf3fF+xrIF8vMihO+Z7OerVrhWzYWo5cJ7NLrOc+L7eW26hTzoBKcwQcJmZXf\nLDCG6s7pmAceANEHvWPZQMpuGV3sWn6762nLYBe7A7bow7QrMVgt2I4Er5VVz03v\nqm7qUtuztiwv+0X2Lg/g4cRO\n-----END PRIVATE KEY-----\n</key>\n\n<tls-crypt>\n-----BEGIN OpenVPN Static key V1-----\nc23c108f8f617988cc0dc219d9793328\n2cc2b9d4f094864514c91b17f67d1cae\naebe8ea7bbe4f9f8a4991af161400fa7\ncc9c40bc49667d45f65339d6854c3fa1\n64f11e79a57e0893553cc4540f7b10c5\nc0824ff449f5bee029a35afc15231560\n0e74ebd17c129d88f768a7d154eecf69\nb370b2d62406349735a4c44fd571196b\n805bfb25d5c7e0c61b34cee83bf6642c\ne922dca4f5f502654b8070b78e2197c7\n2b7a005c2025c3fcbc3c1f78ed170b71\n951bd4ddb98dbad18ae818fe7d69483e\n6f898ab72977bb420b12f9ee095aabb0\n67192802ee45aa2e0bdab99950ab0579\n3117338350daef46e02e6a6a75e5b230\n886b386a5ee90b7d782ed203511da0a8\n-----END OpenVPN Static key V1-----\n</tls-crypt>\n"
       },
       "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrIn5bZWiyQO5anF8JlmILMiyqLYHfAEVNTmx93WM0-dEtp7UnUhL9fWI&s=10"
+    },
+    {
+      "id": "server-2",
+      "name": "SMART FREE - SUPER FAST 🔥",
+      "country": "Cambodia 🇰🇭",
+      "country_code": "",
+      "protocol": "fastdns",
+      "address": "1",
+      "port": 53,
+      "tier": "premium",
+      "config": {
+        "local_port": 8080,
+        "dns_resolver": "1.1.1.1:53",
+        "ovpn": "Vv"
+      },
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrIn5bZWiyQO5anF8JlmILMiyqLYHfAEVNTmx93WM0-dEtp7UnUhL9fWI&s=10"
+    },
+    {
+      "id": "server-3",
+      "name": "SMART FREE - SUPER FAST 🔥",
+      "country": "Singapore 🇸🇬",
+      "country_code": "SG",
+      "protocol": "fastdns",
+      "address": "2",
+      "port": 53,
+      "tier": "premium",
+      "config": {
+        "local_port": 8080,
+        "dns_resolver": "1.1.1.1:53",
+        "ovpn": "H"
+      },
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrIn5bZWiyQO5anF8JlmILMiyqLYHfAEVNTmx93WM0-dEtp7UnUhL9fWI&s=10"
+    },
+    {
+      "id": "server-4",
+      "name": "SMART FREE - SUPER FAST 🔥",
+      "country": "Vietnam 🇻🇳",
+      "country_code": "VN",
+      "protocol": "fastdns",
+      "address": "5",
+      "port": 53,
+      "tier": "premium",
+      "config": {
+        "local_port": 8080,
+        "dns_resolver": "1.1.1.1:53",
+        "ovpn": "Gg"
+      },
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrIn5bZWiyQO5anF8JlmILMiyqLYHfAEVNTmx93WM0-dEtp7UnUhL9fWI&s=10"
+    },
+    {
+      "id": "server-5",
+      "name": "Metfone 5G - Super Fast ⚡",
+      "country": "Cambodia 🇰🇭",
+      "country_code": "KH",
+      "protocol": "vless",
+      "address": "104.18.36.89",
+      "port": 443,
+      "tier": "premium",
+      "config": {
+        "uuid": "69db9ce7-ba3a-41ab-b5d3-67e39148d27b",
+        "security": "tls",
+        "network": "xhttp",
+        "path": "/",
+        "host": "kh.khmer.qzz.io",
+        "sni": "kh.khmer.qzz.io",
+        "fingerprint": "chrome"
+      },
+      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+    },
+    {
+      "id": "server-6",
+      "name": "Metfone 5G - Super Fast ⚡",
+      "country": "Thailand 🇹🇭",
+      "country_code": "TH",
+      "protocol": "vless",
+      "address": "104.18.36.89",
+      "port": 443,
+      "tier": "premium",
+      "config": {
+        "uuid": "69db9ce7-ba3a-41ab-b5d3-67e39148d27b",
+        "security": "tls",
+        "network": "xhttp",
+        "path": "/",
+        "host": "indo.khmer.qzz.io",
+        "sni": "indo.khmer.qzz.io",
+        "fingerprint": "chrome"
+      },
+      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+    },
+    {
+      "id": "server-7",
+      "name": "Metfone 5G - Super Fast ⚡",
+      "country": "Singapore 🇸🇬",
+      "country_code": "SG",
+      "protocol": "vless",
+      "address": "104.18.36.89",
+      "port": 443,
+      "tier": "premium",
+      "config": {
+        "uuid": "69db9ce7-ba3a-41ab-b5d3-67e39148d27b",
+        "security": "tls",
+        "network": "xhttp",
+        "path": "/",
+        "host": "sg.khmer.qzz.io",
+        "sni": "sg.khmer.qzz.io",
+        "fingerprint": "chrome"
+      },
+      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+    },
+    {
+      "id": "server-8",
+      "name": "Metfone 5G - Super Fast ⚡",
+      "country": "Vitamin 🇻🇳",
+      "country_code": "VN",
+      "protocol": "vless",
+      "address": "104.18.36.89",
+      "port": 443,
+      "tier": "premium",
+      "config": {
+        "uuid": "69db9ce7-ba3a-41ab-b5d3-67e39148d27b",
+        "security": "tls",
+        "network": "xhttp",
+        "path": "/",
+        "host": "vn.khmer.qzz.io",
+        "sni": "vn.khmer.qzz.io",
+        "fingerprint": "chrome"
+      },
+      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
     }
   ],
   "khrq-key": "sk_745703f88d04abd8f7ab266003671295146f621d37a78dcb",
   "config_version": "2",
-  "update_notes": "Hi",
+  "update_notes": "Hi Test",
   "updated_at": "2026-08-01"
 }

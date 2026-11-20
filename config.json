@@ -148,6 +148,13 @@
       "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
     }
   ],
+  "networks": [
+    {
+      "id": "ff",
+      "name": "test",
+      "address": "172.64.151.167"
+    }
+  ],
   "khrq-key": "sk_745703f88d04abd8f7ab266003671295146f621d37a78dcb",
   "config_version": "2",
   "update_notes": "Hi Test",

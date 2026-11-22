@@ -69,11 +69,11 @@
     },
     {
       "id": "server-5",
-      "name": "Metfone 5G - Super Fast ⚡",
+      "name": "Cambodia 🇰🇭 - Super Fast ⚡",
       "country": "Cambodia 🇰🇭",
       "country_code": "KH",
       "protocol": "vless",
-      "address": "104.18.36.89",
+      "address": "kh.khmer.qzz.io",
       "port": 443,
       "tier": "premium",
       "config": {
@@ -85,15 +85,15 @@
         "sni": "kh.khmer.qzz.io",
         "fingerprint": "chrome"
       },
-      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+      "icon": "https://cdn-icons-png.flaticon.com/512/197/197505.png"
     },
     {
       "id": "server-6",
-      "name": "Metfone 5G - Super Fast ⚡",
+      "name": "Thailand 🇹🇭 - Super Fast ⚡",
       "country": "Thailand 🇹🇭",
       "country_code": "TH",
       "protocol": "vless",
-      "address": "104.18.36.89",
+      "address": "indo.khmer.qzz.io",
       "port": 443,
       "tier": "premium",
       "config": {
@@ -105,15 +105,15 @@
         "sni": "indo.khmer.qzz.io",
         "fingerprint": "chrome"
       },
-      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+      "icon": "https://cdn-icons-png.flaticon.com/512/323/323281.png"
     },
     {
       "id": "server-7",
-      "name": "Metfone 5G - Super Fast ⚡",
+      "name": "Singapore 🇸🇬 - Super Fast ⚡",
       "country": "Singapore 🇸🇬",
       "country_code": "SG",
       "protocol": "vless",
-      "address": "104.18.36.89",
+      "address": "sg.khmer.qzz.io",
       "port": 443,
       "tier": "premium",
       "config": {
@@ -125,15 +125,15 @@
         "sni": "sg.khmer.qzz.io",
         "fingerprint": "chrome"
       },
-      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+      "icon": "https://cdn-icons-png.flaticon.com/512/11654/11654477.png"
     },
     {
       "id": "server-8",
-      "name": "Metfone 5G - Super Fast ⚡",
-      "country": "Vitamin 🇻🇳",
+      "name": "Vietnam 🇻🇳 - Super Fast ⚡",
+      "country": "Vietnam 🇻🇳",
       "country_code": "VN",
       "protocol": "vless",
-      "address": "104.18.36.89",
+      "address": "vn.khmer.qzz.io",
       "port": 443,
       "tier": "premium",
       "config": {
@@ -145,18 +145,37 @@
         "sni": "vn.khmer.qzz.io",
         "fingerprint": "chrome"
       },
-      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+      "icon": "https://cdn-icons-png.flaticon.com/512/323/323319.png"
     }
   ],
   "networks": [
     {
-      "id": "ff",
-      "name": "test",
-      "address": "172.64.151.167"
+      "id": "cambodia-metfone-5g",
+      "name": "Cambodia Metfone 5G",
+      "address": "172.64.151.167",
+      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+    },
+    {
+      "id": "cambodia-metfone-5g-2",
+      "name": "Cambodia Metfone 5G",
+      "address": "104.18.36.89",
+      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+    },
+    {
+      "id": "cambodia-metfone-5g---mlbb",
+      "name": "Cambodia Metfone 5G - MLBB",
+      "address": "104.16.125.32",
+      "icon": "https://metfone.com.kh/image/5G/5G_MetfoneIcon.png"
+    },
+    {
+      "id": "cambodia-cellcard-ao5g",
+      "name": "Cambodia Cellcard AO5G",
+      "address": "cdn.yellowmessenger.com",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStwzR2KgukI5SgSlrd-GOj3Ep5hY9joMmVxhaKFhMZaw&s=10"
     }
   ],
   "khrq-key": "sk_745703f88d04abd8f7ab266003671295146f621d37a78dcb",
-  "config_version": "2",
-  "update_notes": "Hi Test",
-  "updated_at": "2026-08-01"
+  "config_version": "5",
+  "update_notes": "សូមស្វាគមន៍មកកាន់កំណែថ្មី",
+  "updated_at": "2026-11-22"
 }

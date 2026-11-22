@@ -177,5 +177,8 @@
   "khrq-key": "sk_745703f88d04abd8f7ab266003671295146f621d37a78dcb",
   "config_version": "5",
   "update_notes": "សូមស្វាគមន៍មកកាន់កំណែថ្មី",
-  "updated_at": "2026-11-22"
+  "updated_at": "2026-11-22",
+  "apk_version": "1.0.1",
+  "update_apk": "https://api.betadrop.app/api/guest/download/JSy3Ep",
+  "update_messages": "Hi"
 }

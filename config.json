@@ -180,5 +180,19 @@
   "updated_at": "2026-11-22",
   "apk_version": "1.0.1",
   "update_apk": "https://r2.betadrop.space/guest/amDEis/app-release.apk?bde=1795510927&bds=7bd5164df955563ef21bc47b210758970c07d576a58e5160a1226a29d6a4b794",
-  "update_messages": "apk Update Luna Server"
+  "update_messages": "apk Update Luna Server",
+  "premium_keys": [
+    {
+      "id": "0ee7e66883ec",
+      "key_hash": "04afd60d17408b731eea464f431501f53b3592c721e5d5993a1e980091eaaa90",
+      "days": 30,
+      "limit": 1,
+      "used": 0,
+      "devices": [],
+      "expires_at": 1798131599,
+      "created_at": 1795489665,
+      "label": "",
+      "enabled": true
+    }
+  ]
 }

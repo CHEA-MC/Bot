@@ -154,11 +154,12 @@
       "country_code": "",
       "protocol": "udp_custom",
       "address": "171.244.44.251",
-      "port": 443,
+      "port": 1,
       "tier": "free",
       "config": {
         "username": "nskks",
-        "password": "jdjdjjd21"
+        "password": "jdjdjjd21",
+        "ports": "1-65535"
       }
     }
   ],
